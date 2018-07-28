@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wordcreators.avoid2">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher_new_player"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_new_player_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AllMainMenu.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AllGameFile.GameWindow" />
+        <activity android:name=".AllSettingsWindow.SettingsWindow" />
+        <activity android:name=".AllMainMenu.DifficultyWindow" />
+        <activity android:name=".AllSettingsWindow.ImageWindow" />
+        <activity android:name=".AllSettingsWindow.yourSettingWindow" />
+        <activity android:name=".AllSettingsWindow.SoundSetting" />
+        <activity android:name=".AllSettingsWindow.GameSettingWindow" />
+        <activity android:name=".AllMainMenu.RecordWindow" />
+        <activity android:name=".ErrorScreen"></activity>
+    </application>
+
+</manifest>

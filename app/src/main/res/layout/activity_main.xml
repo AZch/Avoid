@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backkkk"
+    android:gravity="center"
+    tools:context="wordcreators.avoid2.AllMainMenu.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/menuGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/backnameText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeTextMain"
+        android:layout_margin="30dp"
+        android:padding="5dp"
+        android:alpha="0.5"
+        android:scaleType="fitXY"
+        android:background="@drawable/backname"
+        app:layout_constraintBottom_toBottomOf="@+id/avoidText1"
+        app:layout_constraintLeft_toLeftOf="@+id/avoidText1"
+        app:layout_constraintRight_toRightOf="@+id/avoidText5"
+        app:layout_constraintTop_toTopOf="@+id/avoidText1" />
+
+    <TextView
+        android:id="@+id/avoidText1"
+        android:onClick="avoidText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sizeTextMain"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/avoidText2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/allButton"
+        android:text="A"/>
+
+    <TextView
+        android:id="@+id/avoidText2"
+        android:onClick="avoidText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sizeTextMain"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/avoidText3"
+        app:layout_constraintLeft_toRightOf="@+id/avoidText1"
+        app:layout_constraintBottom_toTopOf="@+id/allButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="V"/>
+
+    <TextView
+        android:id="@+id/avoidText3"
+        android:onClick="avoidText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sizeTextMain"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/avoidText4"
+        app:layout_constraintLeft_toRightOf="@+id/avoidText2"
+        app:layout_constraintBottom_toTopOf="@+id/allButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="O"/>
+
+    <TextView
+        android:id="@+id/avoidText4"
+        android:onClick="avoidText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sizeTextMain"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/avoidText5"
+        app:layout_constraintLeft_toRightOf="@+id/avoidText3"
+        app:layout_constraintBottom_toTopOf="@+id/allButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="I"/>
+
+    <TextView
+        android:id="@+id/avoidText5"
+        android:onClick="avoidText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sizeTextMain"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/avoidText4"
+        app:layout_constraintBottom_toTopOf="@+id/allButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="D"/>
+
+    <LinearLayout
+        android:id="@+id/allButton"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linerFirstTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/startButton"
+            android:onClick="startButtonTouch"
+            android:layout_width="@dimen/widthButtonMenu"
+            android:layout_height="75dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/play"
+            android:layout_marginRight="@dimen/buttonBellowButton"
+            android:layout_marginBottom="@dimen/buttonBellowButton"/>
+
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:onClick="settingsButtonTouch"
+            android:layout_width="@dimen/widthButtonMenu"
+            android:layout_height="75dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/settings"
+            android:layout_marginLeft="@dimen/buttonBellowButton"
+            android:layout_marginBottom="@dimen/buttonBellowButton"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linerSecondTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/recordButton"
+                android:onClick="recordsButtonTouch"
+                android:layout_width="@dimen/widthButtonMenu"
+                android:layout_height="75dp"
+                android:text="@string/recordsButton"
+                android:layout_below="@+id/linerFirstTwo"
+                android:src="@drawable/records"
+                android:layout_marginTop="@dimen/buttonBellowButton"
+                android:layout_marginRight="@dimen/buttonBellowButton"/>
+
+            <ImageView
+                android:id="@+id/exitButton"
+                android:onClick="exitButtonTouch"
+                android:layout_width="@dimen/widthButtonMenu"
+                android:layout_height="75dp"
+                android:text="@string/exitButtonMenu"
+                android:layout_below="@+id/recordButton"
+                android:src="@drawable/stop"
+                android:layout_marginTop="@dimen/buttonBellowButton"
+                android:layout_marginLeft="@dimen/buttonBellowButton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundMenu"
+    tools:context="wordcreators.avoid2.AllMainMenu.RecordWindow">
+
+    <LinearLayout
+        android:id="@+id/recordGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeName"
+            android:text="@string/records"
+            android:layout_marginTop="@dimen/marginName"
+            android:layout_marginBottom="@dimen/marginName"/>
+
+        <TextView
+            android:id="@+id/easyMaxRoomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordEasy"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/easyMaxDeadEnemyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordKillEasy"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/normalMaxRoomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordNormal"
+            android:layout_marginTop="@dimen/marginRecords"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/normalMaxDeadEnemyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordKillNormal"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/hardMaxRoomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordHard"
+            android:layout_marginTop="@dimen/marginRecords"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/hardMaxDeadEnemyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/recordKillHard"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="@dimen/marginStandart" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

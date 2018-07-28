@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/backgroundMenu"
+    tools:context="wordcreators.avoid2.AllMainMenu.DifficultyWindow">
+
+    <LinearLayout
+        android:id="@+id/difficultyGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/difficultyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeDifficultyText"
+            android:text="@string/difficultyText"/>
+
+        <RadioGroup
+            android:id="@+id/allDifficultyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/easyRadioButton"
+                android:onClick="easyButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/easyRadioButton"
+                android:textSize="@dimen/sizeRadioButtonText" />
+
+            <RadioButton
+                android:id="@+id/normalRadioButton"
+                android:onClick="normalButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/normalRadioButton"
+                android:textSize="@dimen/sizeRadioButtonText"/>
+
+            <RadioButton
+                android:id="@+id/hardRadioButton"
+                android:onClick="hardButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardRadioButton"
+                android:textSize="@dimen/sizeRadioButtonText"/>
+
+            <RadioButton
+                android:id="@+id/randomRadioButton"
+                android:onClick="randomButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/randomRadioButton"
+                android:textSize="@dimen/sizeRadioButtonText"/>
+
+            <RadioButton
+                android:id="@+id/yourSettingRadioButton"
+                android:onClick="yourSettingButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yourSettingRadioButton"
+                android:textSize="@dimen/sizeRadioButtonText"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/buttonBellowButton">
+
+            <ImageView
+                android:id="@+id/okeyClick"
+                android:onClick="okeyClick"
+                android:layout_width="@dimen/widthButtonMenu"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/yes"
+                android:layout_marginRight="@dimen/buttonBellowButton"
+                android:layout_marginTop="@dimen/buttonBellowButton"/>
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:onClick="closeClick"
+                android:layout_width="@dimen/widthButtonMenu"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/no"
+                android:layout_marginLeft="@dimen/buttonBellowButton"
+                android:layout_marginTop="@dimen/buttonBellowButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

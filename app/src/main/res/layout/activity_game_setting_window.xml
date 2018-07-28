@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wordcreators.avoid2.AllSettingsWindow.GameSettingWindow"
+    android:background="@color/backgroundMenu"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/gameSettingGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sizeName"
+            android:text="@string/settingControlsTextView"
+            android:layout_marginTop="@dimen/marginName"
+            android:layout_marginBottom="@dimen/marginName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/controlFire"
+            android:layout_marginLeft="@dimen/marginStandart"
+            android:textSize="@dimen/sizeDifficultyText" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/standartFireRadioButton"
+                android:onClick="standartTextureRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/joystickFire"
+                android:layout_marginLeft="@dimen/marginStandart" />
+
+            <RadioButton
+                android:id="@+id/touchFireRadioButton"
+                android:onClick="touchFireRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/touchFire"
+                android:layout_marginLeft="@dimen/marginStandart"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/updateObj"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="@dimen/marginStandart"
+            android:textSize="@dimen/sizeDifficultyText" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white">
+
+            <RadioButton
+                android:id="@+id/updateAllEnemyRadioButton"
+                android:onClick="updateAllEnemyRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/updateAllEnemy"
+                android:layout_marginLeft="@dimen/marginStandart"/>
+
+            <RadioButton
+                android:id="@+id/updateOnScreenEnemyRadioButton"
+                android:onClick="updateOnScreenEnemyRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/updateOnScreenEnemy"
+                android:layout_marginLeft="@dimen/marginStandart" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

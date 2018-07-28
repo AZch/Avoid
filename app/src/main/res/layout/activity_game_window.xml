@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMenu"
+    tools:context=".AllGameFile.GameWindow">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/allGameElementLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/gameLayout"
+            android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/joystickField"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/joystickfield"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/joystickMargin"
+            android:alpha="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/joystickMargin"
+            android:layout_marginStart="@dimen/joystickMargin" />
+
+        <ImageView
+            android:id="@+id/joystickMove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/joystickmove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/joystickMoveMargin"
+            android:alpha="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/joystickMoveMargin"
+            android:layout_marginStart="@dimen/joystickMoveMargin" />
+
+        <ImageView
+            android:id="@+id/joystickFireField"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/joystickfield"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/joystickMargin"
+            android:alpha="0.5"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/joystickMargin" />
+
+        <ImageView
+            android:id="@+id/joystickFireMove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/joystickmove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/joystickMoveMargin"
+            android:alpha="0.5"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/joystickMoveMargin" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:alpha="125"
+            app:layout_constraintTop_toTopOf="@+id/lifeCountText"
+            app:layout_constraintLeft_toLeftOf="@+id/lifeCountText"
+            app:layout_constraintRight_toRightOf="@+id/deadEnemyCountText"
+            app:layout_constraintBottom_toBottomOf="@id/lifeCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/lifeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/lifeicon"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/marginStandart" />
+
+        <TextView
+            android:id="@+id/lifeCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/lifeIcon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/iconMarginTop"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/bulletIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/bulleticon"
+            app:layout_constraintLeft_toRightOf="@+id/lifeIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/bulletCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/bulletIcon"
+            app:layout_constraintLeft_toLeftOf="@+id/bulletIcon"
+            android:layout_marginTop="@dimen/iconMarginTop"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/roomsIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/portal"
+            app:layout_constraintLeft_toRightOf="@+id/bulletIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/roomsCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/roomsIcon"
+            app:layout_constraintLeft_toLeftOf="@+id/roomsIcon"
+            android:layout_marginTop="@dimen/iconMarginTop"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/deadEnemyIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/deadenemyicon"
+            app:layout_constraintLeft_toRightOf="@+id/roomsIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/deadEnemyCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/deadEnemyIcon"
+            app:layout_constraintLeft_toLeftOf="@+id/deadEnemyIcon"
+            android:layout_marginTop="@dimen/iconMarginTop"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/menuButton"
+            android:onClick="openMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/pause"
+            android:layout_marginEnd="@dimen/marginStandart"
+            android:layout_marginTop="@dimen/marginStandart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/inventoryButton"
+            android:onClick="openInventory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/backpack"
+            android:layout_marginEnd="@dimen/marginStandart"
+            android:layout_marginBottom="@dimen/marginStandart"
+            app:layout_constraintBottom_toTopOf="@+id/touchThingOnMap"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/addInInventory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="100"
+            android:layout_marginEnd="@dimen/marginStandart"
+            android:layout_marginBottom="@dimen/marginStandart"
+            app:layout_constraintLeft_toLeftOf="@+id/inventoryButton"
+            app:layout_constraintTop_toTopOf="@id/inventoryButton"
+            app:layout_constraintBottom_toTopOf="@+id/touchThingOnMap"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        <ImageView
+            android:id="@+id/activeGunImageView"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="@dimen/marginStandart"
+            android:layout_marginTop="@dimen/marginStandart"
+            app:layout_constraintBottom_toTopOf="@+id/inventoryButton"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/thisCountBulletText"
+            app:layout_constraintBottom_toTopOf="@id/activeGunImageView"
+            app:layout_constraintLeft_toLeftOf="@id/activeGunImageView"
+            app:layout_constraintRight_toRightOf="@id/activeGunImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:text="0"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:id="@+id/resumeButton"
+                android:onClick="resumeGame"
+                android:layout_width="@dimen/sizeButtonInGame"
+                android:layout_height="@dimen/sizeButtonInGame"
+                app:srcCompat="@drawable/play"
+                android:layout_marginRight="@dimen/marginStandart"/>
+
+            <ImageView
+                android:id="@+id/closeGameButton"
+                android:onClick="exitGame"
+                android:layout_width="@dimen/sizeButtonInGame"
+                android:layout_height="@dimen/sizeButtonInGame"
+                app:srcCompat="@drawable/stop"
+                android:layout_marginLeft="@dimen/marginStandart"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/inventoryLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/lifeIcon"
+            app:layout_constraintBottom_toTopOf="@+id/joystickField"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/menuButton"
+            android:layout_margin="@dimen/marginStandart"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leftArm"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame_inventory_png"/>
+
+                    <ImageView
+                        android:id="@+id/rightArm"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame_inventory_png"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/frame_inventory_png"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/scrollOtherThings"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/frame_inventory_png">
+                    <LinearLayout
+                        android:id="@+id/otherThings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/scrollInventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/frame_inventory_png">
+                    <LinearLayout
+                        android:id="@+id/yourInventory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/touchThingOnMap"
+            android:onClick="takeThingOnMap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/hand"
+            app:layout_constraintBottom_toTopOf="@+id/reloadGun"
+            android:layout_marginBottom="@dimen/marginStandart"
+            app:layout_constraintRight_toRightOf="@+id/menuButton"/>
+
+        <ImageView
+            android:id="@+id/reloadGun"
+            android:onClick="reloadGun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/magazine"
+            android:layout_marginBottom="@dimen/marginStandart"
+            app:layout_constraintBottom_toTopOf="@+id/joystickFireField"
+            app:layout_constraintRight_toRightOf="@+id/menuButton"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressLoad"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_marginLeft="@dimen/marginStandart"
+            android:layout_marginRight="@dimen/marginStandart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/LoadProgressTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/backgroundMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/whatLoadTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginStandart"
+            android:layout_below="@+id/LoadProgressTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

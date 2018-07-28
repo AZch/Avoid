@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/backkkk"
+    tools:context="wordcreators.avoid2.AllSettingsWindow.SettingsWindow">
+
+    <LinearLayout
+        android:id="@+id/settingGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameSettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity=""
+            android:textSize="@dimen/sizeName"
+            android:textColor="@color/white"
+            android:text="@string/settingNameText"
+            android:layout_marginBottom="@dimen/marginName"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/difficultyButton"
+                    android:onClick="difficultyButton"
+                    android:layout_width="@dimen/widthButtonMenu"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/difficulty"
+                    android:layout_marginRight="@dimen/buttonBellowButton"
+                    android:layout_marginBottom="@dimen/buttonBellowButton"/>
+
+                <ImageView
+                    android:id="@+id/soundButton"
+                    android:onClick="soundButton"
+                    android:layout_width="@dimen/widthButtonMenu"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/soundsettings"
+                    android:layout_marginLeft="@dimen/buttonBellowButton"
+                    android:layout_marginBottom="@dimen/buttonBellowButton"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:onClick="imageButton"
+                    android:layout_width="@dimen/widthButtonMenu"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/imagesettings"
+                    android:layout_marginRight="@dimen/buttonBellowButton"
+                    android:layout_marginTop="@dimen/buttonBellowButton"/>
+
+                <ImageView
+                    android:id="@+id/controlButton"
+                    android:onClick="controlButton"
+                    android:layout_width="@dimen/widthButtonMenu"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gamesettings"
+                    android:layout_marginLeft="@dimen/buttonBellowButton"
+                    android:layout_marginTop="@dimen/buttonBellowButton"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMenu"
+    tools:context="wordcreators.avoid2.AllSettingsWindow.ImageWindow">
+
+    <LinearLayout
+        android:id="@+id/imageGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeName"
+            android:text="@string/settingImageTextView"
+            android:layout_marginTop="@dimen/marginName"
+            android:layout_marginBottom="@dimen/marginName"/>
+
+        <TextView
+            android:id="@+id/zoomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/zoomText"
+            android:layout_marginLeft="@dimen/marginStandart"/>
+
+        <SeekBar
+            android:id="@+id/zoomSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginStandart"
+            android:max="9"/>
+
+        <TextView
+            android:id="@+id/textureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/textureTextView"
+            android:layout_marginLeft="@dimen/marginStandart"
+            android:textSize="@dimen/sizeDifficultyText" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/standartTextureRadioButton"
+                android:onClick="standartTextureRadioButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/standartTexture"
+                android:layout_marginLeft="@dimen/marginStandart" />
+
+            <RadioButton
+                android:id="@+id/customTextureRadioButton"
+                android:onClick="yourTextureRadioButton"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customTexture"
+                android:layout_marginLeft="@dimen/marginStandart"/>
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/playerLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/playerTexture" />
+
+                        <ImageView
+                            android:id="@+id/playerImageView"
+                            android:textColor="@color/white"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:onClick="newTexturePlayer"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wallLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/wallTexture" />
+
+                        <ImageView
+                            android:id="@+id/wallImageView"
+                            android:textColor="@color/white"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/wall"
+                            android:onClick="newTextureWall"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bulletLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bulletTexture" />
+
+                        <ImageView
+                            android:id="@+id/bulletImageView"
+                            android:textColor="@color/white"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:onClick="newTextureBullet"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/marginStandart">
+
+                    <LinearLayout
+                        android:id="@+id/enemyLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enemyTexture" />
+
+                        <ImageView
+                            android:id="@+id/enemyImageView"
+                            android:textColor="@color/white"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:onClick="newTextureEnemy"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/EnemyDeadLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enemyDeadTexture"/>
+
+                        <ImageView
+                            android:id="@+id/enemyDeadImageView"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/enemydead"
+                            android:onClick="newTextureEnemyDead"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/enemyTrigLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enemyTrigTexture"/>
+
+                        <ImageView
+                            android:id="@+id/enemyTrigImageView"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/enemyframe"
+                            android:onClick="newTextureEnemyTrig"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/marginStandart">
+
+                    <LinearLayout
+                        android:id="@+id/portalLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/portalTexture"/>
+
+                        <ImageView
+                            android:id="@+id/portalImageView"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/portal"
+                            android:onClick="newTexturePortal"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/medkitLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/medkitTexture"/>
+
+                        <ImageView
+                            android:id="@+id/medkitImageView"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/medkit"
+                            android:onClick="newTextureMedkit"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ammoLinerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/marginStandart">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/ammoTexture" />
+
+                        <ImageView
+                            android:id="@+id/ammoImageView"
+                            android:layout_width="@dimen/TextureNewIconButton"
+                            android:layout_height="@dimen/TextureNewIconButton"
+                            android:background="@drawable/ammo"
+                            android:onClick="newTextureAmmo"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

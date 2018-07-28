@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/backgroundMenu"
+    tools:context="wordcreators.avoid2.AllSettingsWindow.yourSettingWindow">
+
+    <LinearLayout
+        android:id="@+id/yourSettingGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/yourSettingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeName"
+                    android:layout_marginBottom="@dimen/marginName"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:text="@string/yourSettingText"/>
+
+                <TextView
+                    android:id="@+id/lifePlayerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/lifePlayerCountText"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/yourSettingText"/>
+
+                <SeekBar
+                    android:id="@+id/lifePlayerSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/lifePlayerText"
+                    android:max="30"/>
+
+
+                <TextView
+                    android:id="@+id/bulletPlayerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/bulletPlayerCountText"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/lifePlayerSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/bulletPlayerSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/bulletPlayerText"
+                    android:max="500"/>
+
+
+                <TextView
+                    android:id="@+id/numberOfPossibleMedkitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/numberOfPossibleMedkitText"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/bulletPlayerSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/numberOfPossibleMedkitrSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/numberOfPossibleMedkitText"
+                    android:max="10"/>
+
+
+                <TextView
+                    android:id="@+id/numberOfPossibleAmmoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/numberOfPossibleAmmoText"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/numberOfPossibleMedkitrSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/numberOfPossibleAmmoSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/numberOfPossibleAmmoText"
+                    android:max="10"/>
+
+
+                <TextView
+                    android:id="@+id/startEnemyCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/startEnemyCount"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/numberOfPossibleAmmoSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/startEnemyCountSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/startEnemyCountText"
+                    android:max="200"/>
+
+
+                <TextView
+                    android:id="@+id/startEnemyLifeCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/startEnemyLifeCount"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/startEnemyCountSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/startEnemyLifeCountSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/startEnemyLifeCountText"
+                    android:max="20"/>
+
+                <TextView
+                    android:id="@+id/AddEnemyOnNextLvlText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/AddEnemyOnNextLvl"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/startEnemyLifeCountSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/AddEnemyOnNextLvlSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/AddEnemyOnNextLvlText"
+                    android:max="10"/>
+
+                <TextView
+                    android:id="@+id/speedPlayerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/speedPlayer"
+                    android:layout_marginTop="@dimen/marginStandart"
+                    android:layout_below="@+id/AddEnemyOnNextLvlSeekBar"
+                    android:layout_marginLeft="@dimen/marginStandart"/>
+
+                <SeekBar
+                    android:id="@+id/speedPlayerSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginStandart"
+                    android:layout_below="@+id/speedPlayerText"
+                    android:max="20"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
